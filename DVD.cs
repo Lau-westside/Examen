@@ -1,5 +1,5 @@
-public class DVD : Libro
+public  class DVD : Ejemplar
 {
-   public int Duracion {get; set;}
+   public string Duracion {get; set;}
 } 
 

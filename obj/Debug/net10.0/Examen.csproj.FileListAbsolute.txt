@@ -1,0 +1,15 @@
+/workspaces/Examen/bin/Debug/net10.0/Examen
+/workspaces/Examen/bin/Debug/net10.0/Examen.deps.json
+/workspaces/Examen/bin/Debug/net10.0/Examen.runtimeconfig.json
+/workspaces/Examen/bin/Debug/net10.0/Examen.dll
+/workspaces/Examen/bin/Debug/net10.0/Examen.pdb
+/workspaces/Examen/obj/Debug/net10.0/Examen.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/Examen/obj/Debug/net10.0/Examen.AssemblyInfoInputs.cache
+/workspaces/Examen/obj/Debug/net10.0/Examen.AssemblyInfo.cs
+/workspaces/Examen/obj/Debug/net10.0/Examen.csproj.CoreCompileInputs.cache
+/workspaces/Examen/obj/Debug/net10.0/Examen.sourcelink.json
+/workspaces/Examen/obj/Debug/net10.0/Examen.dll
+/workspaces/Examen/obj/Debug/net10.0/refint/Examen.dll
+/workspaces/Examen/obj/Debug/net10.0/Examen.pdb
+/workspaces/Examen/obj/Debug/net10.0/Examen.genruntimeconfig.cache
+/workspaces/Examen/obj/Debug/net10.0/ref/Examen.dll

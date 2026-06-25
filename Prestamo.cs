@@ -1,4 +1,4 @@
-public class Prestamo : Biblioteca
+public  class Prestamo : Ejemplar
 {
      public int CodigoEjemplar {get; set;}
      public DateTime FechaPréstamo {get; set;}

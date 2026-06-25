@@ -1,4 +1,4 @@
-public class Ejemplares : Biblioteca
+public class Ejemplar : Biblioteca
 {
     
 public string Titulo {get; set;}

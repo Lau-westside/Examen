@@ -1,6 +1,6 @@
-public class Revista : Libro
+public class Revista : Ejemplar
 {
-    public datatime Fecha {get; set;}
+    public DateTime Fecha {get; set;}
     public int Numero {get; set;}
 
 }
