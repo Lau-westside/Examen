@@ -31,7 +31,7 @@ void CrearLibros()
             Console.WriteLine("Ingrese el ISBN del Libro");
             libro.ISBN = Console.ReadLine();
             Console.WriteLine("Ingrese año de publicacion del Libro");
-            libro.AnioPublicado = Console.ReadLine();
+            libro.AnioPublicado = DateTime.Parse(Console.ReadLine());
             ejemplares.Add(libro);
             break;
         case 3:
@@ -52,9 +52,9 @@ void CrearLibros()
             break;
     }
     Console.WriteLine("El ejemplar ha sido registrado correctamente");
-   
+   Menu();
 }
-Menu();
+
 void RegistrarPrestamo()
 {
     Console.WriteLine("Ingrese el Titulo del libro que desea prestar");
@@ -93,24 +93,23 @@ void RegistrarPrestamo()
     Console.WriteLine("El prestamo ha sido registrado correctamente");
     Menu();
 }
-Menu();
+
 void RegistrarDevolucion()
 {
     Console.WriteLine("Ingrese el Titulo del libro que desea devolver");
     string buscar = Console.ReadLine();
+    Ejemplar e = null;
 
-    Ejemplar ejemplar = null;
-
-    foreach (Prestamo p in prestamos)
+    foreach (Ejemplar ejemplar in ejemplares)
     {
-        if (p.CodigoEjemplar == ejemplar.Código && p.Devolucion == true)
+        if (ejemplar.Titulo == buscar)
         {
-            ejemplar = p;
+            e = ejemplar;
             break;
         }
     }
 
-    if (ejemplar == null)
+    if (e == null)
     {
         Console.WriteLine("No se encontró el ejemplar con ese título");
         Menu();
@@ -119,7 +118,7 @@ void RegistrarDevolucion()
 
     foreach (Prestamo p in prestamos)
     {
-        if (p.CodigoEjemplar == ejemplar.Código && p.Devolucion == true)
+        if (p.CodigoEjemplar == e.Código && p.Devolucion == true)
         {
             p.Devolucion = false;
             Console.WriteLine("El libro ha sido devuelto correctamente");
@@ -129,20 +128,20 @@ void RegistrarDevolucion()
     }
 
     Console.WriteLine("No hay un prestamo activo para ese ejemplar");
-
+    Menu();
 }
-Menu();
+
 void ConsultarDisp()
 {
     Console.WriteLine("Que Libro, o Ejemplar, desea buscar");
     string buscar = Console.ReadLine();
     Ejemplar ejemplar = null;
 
-    foreach (Prestamo p in prestamos)
+    foreach (Ejemplar e in ejemplares)
     {
-        if (p.CodigoEjemplar == ejemplar.Código && p.Devolucion == true)
+        if (e.Titulo == buscar)
         {
-            ejemplar = p;
+            ejemplar = e;
             break;
         }
     }
@@ -174,7 +173,7 @@ void ConsultarDisp()
     }
 
 }
-Menu();
+
 
 void ListaPendienteDevo()
 {
@@ -199,7 +198,7 @@ void ListaPendienteDevo()
     }
 
 }
-Menu();
+
 
 void ListaEjemplaresPrestados()
 {
@@ -222,8 +221,9 @@ void ListaEjemplaresPrestados()
             }
         }
     }
-}
 Menu();
+}
+
 
 void Menu()
 {
@@ -265,8 +265,9 @@ void Menu()
     }
 } 
 while (Opcion != 7);
-}
 Menu();
+}
+
 
 
 
